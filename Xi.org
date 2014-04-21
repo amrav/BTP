@@ -1,0 +1,52 @@
+* Current Implementations
+** Psyclone AIOS:
+   http://www3.imperial.ac.uk/pls/portallive/docs/1/55089696.PDF
+** Open Agent Architecture
+   http://www.ai.sri.com/~cheyer/papers/oaa.pdf
+   Doc/Distrib : http://www.ai.sri.com/~oaa/distrib.html
+** Elvin
+   http://elvin.org/papers/auug97/auug97.html
+** NetP
+** CALO:
+   CALO has six higher functions ( which can be classified into modules?)
+   
+   - Organizing and Prioritizing Information
+   - Preparing Information Artifacts
+   - Mediating Human Communications
+   - Task Management
+   - Scheduling and Reasoning in Time
+   - Resource allocation
+
+*** Cons
+    Focuses a lot on being a personal digital assistant. All its progress is based on how well the digital assitant does. This is reflected by the papers published by the organization and also the main objectives.
+*** Reference: A cognitive framework for delegating to an assitive digital agent
+           http://staff.aub.edu.lb/~nysmith/papers/n34.pdf
+
+** OpenAIR:
+   I don't think openAIR is even relevant enough. Somebody from the company seems to have made the wikipage. Psyclone by CM Labs ,which features on the mind makers sounds more like what we are going for. Uses a blackboard system and openAIR protocol.
+** CORBA:
+   Lots of problems. All stated on the wikipage [http://en.wikipedia.org/wiki/CORBA
+
+* People
+** Kristinn Thorrisson
+   Proposed constructivist AI
+   http://www.aaai.org/ocs/index.php/FSS/FSS09/paper/viewFile/888/1320
+   http://xenia.media.mit.edu/~kris/ftp/Thorisson_chapt9_TFofAGI_Wang_Goertzel_2012.pdf
+   Excerpt:
+   Over the last few decades only a handful of methodologies have been proposed for
+   building large, integrated AI systems – Behavior-Oriented Design (BOD; [5]), the Sub-
+   sumption Architecture [4], Belief, Desires, Intentions (BDI; cf. [28]), and the Construc-
+   tionist Design Methodology (CDM) [37] are among them. CDM rests on solid present-day
+   principles of software engineering, but is specifically designed to help developers man-
+   age system expansion; its principles allow continuous architecture-preserving expansion of
+   complex systems involving large numbers of executable modules, computers, developers,
+   and research teams.
+
+   Architectures like Psyclone, solutions addressing similar needs include Elvin [33], the Open Agent Architecture [18] and NetP [13].
+
+* Other Literary stuff:
+
+ - A problem solving model for collaborative Agents
+ http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.10.1824&rep=rep1&type=pdf
+ - "Communicate" Recipe by Lochbaum, which is based on Shared Plan [download link]
+https://www.google.co.in/url?sa=t&rct=j&q=&esrc=s&source=web&cd=2&cad=rja&uact=8&ved=0CC4QFjAB&url=http%3A%2F%2Fciteseerx.ist.psu.edu%2Fviewdoc%2Fdownload%3Fdoi%3D10.1.1.53.4139%26rep%3Drep1%26type%3Dps&ei=NtJTU47wAoaIrQfSiYGABw&usg=AFQjCNFOd-x07c9fMHJOWpzC3o1gUuo95A&sig2=EXDkn9TcHnYDfZI_3w5m_A
