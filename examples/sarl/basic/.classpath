@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path="src/main/java"/>
+	<classpathentry kind="src" path="src/main/sarl"/>
+	<classpathentry kind="src" path="src/main/generated-sources/xtend"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-1.7"/>
+	<classpathentry kind="lib" path="/home/anakin/btp/eclipse-sarl.linux.gtk.x86_64.zip.1_FILES/plugins/com.google.guava_15.0.0.v201403281430.jar"/>
+	<classpathentry kind="lib" path="/home/anakin/btp/eclipse-sarl.linux.gtk.x86_64.zip.1_FILES/plugins/org.eclipse.xtext.xbase.lib_2.6.2.v201407030533.jar"/>
+	<classpathentry kind="lib" path="/home/anakin/btp/eclipse-sarl.linux.gtk.x86_64.zip.1_FILES/plugins/io.sarl.lang.core_0.1.0.201409031337.jar"/>
+	<classpathentry kind="lib" path="/home/anakin/btp/eclipse-sarl.linux.gtk.x86_64.zip.1_FILES/plugins/io.sarl.util_0.1.0.201409031337.jar"/>
+	<classpathentry kind="lib" path="/home/anakin/btp/eclipse-sarl.linux.gtk.x86_64.zip.1_FILES/plugins/io.sarl.core_0.1.0.201409031337.jar"/>
+	<classpathentry kind="output" path="bin"/>
+</classpath>

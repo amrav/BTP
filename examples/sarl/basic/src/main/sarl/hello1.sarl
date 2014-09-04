@@ -1,0 +1,114 @@
+import io.sarl.core.Behaviors
+import io.sarl.core.DefaultContextInteractions
+import io.sarl.core.ExternalContextAccess
+import io.sarl.core.Initialize
+import io.sarl.core.Lifecycle
+import io.sarl.core.Schedules
+import hello.Utility
+
+event ScheduleEvent {
+	var string : String
+	var delay : Long
+
+	new(str : String, del : Long) {
+		string = str
+		delay = del
+	}
+}
+
+event OutputEvent {
+	var string : String
+
+	new(str : String) {
+		string = str
+	}
+}
+
+/*
+ * Takes an input string and delay value
+ * Schedules the output of the String with the schedule
+ */
+agent InputAgent {
+	uses Lifecycle, Schedules, DefaultContextInteractions, ExternalContextAccess, Behaviors
+	var count : Integer
+
+	/* Print "Hello World" when spawned and wait 2 seconds are kill itself */
+	on Initialize {
+
+		println("Starting waiting for partner")
+		count = 0
+
+		while(true)
+			{
+				var input : String = null;
+
+				while(input == null)
+					{
+						println("Input string")
+						input = Utility.readString();
+					}
+
+					var delay : Integer = null;
+
+					while(delay == null)
+						{
+							println("Input delay in seconds (Integer) ")
+							delay = Utility.readInteger();
+						}
+						var evt = new ScheduleEvent(input, delay.seconds) 
+						emit(evt)
+
+						//		every(1000) [
+						//				println("Send Ping: "+count)
+						//				var evt = new ScheduleEvent("Hello " + count, 5.seconds )
+						//				emit(evt)
+						//				count = count + 1
+						//	
+						//		]
+
+					}
+				}
+
+	def seconds(value : long) : Long {
+		return value * 1000
+	}
+}
+
+/*
+ * Schedules schedule event
+ */
+agent ScheduleAgent {
+	uses Lifecycle, Schedules, DefaultContextInteractions, ExternalContextAccess, Behaviors
+
+	on Initialize {
+
+		println("Waiting for schedules")
+	}
+
+	on ScheduleEvent {
+		println("Recv schedule Event: " + occurrence.string + " going to emit after " + occurrence.delay)
+
+		in(occurrence.delay) [var evt = new OutputEvent(occurrence.string)
+		emit(evt)
+		println("Emitted output event")]
+	}
+
+	def seconds(value : long) : long {
+		return value * 1000
+	}
+}
+
+/*
+ * Outputs string received when OutputEvent occurs
+ */
+agent OutputAgent {
+	uses Lifecycle, Schedules, DefaultContextInteractions, ExternalContextAccess, Behaviors
+
+	on Initialize {
+		println("Waiting for outputs")
+	}
+
+	on OutputEvent {
+		println("Recv outputEvent : " + occurrence.string)
+	}
+}
