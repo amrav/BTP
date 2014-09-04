@@ -1,0 +1,12 @@
+MAS greeting {
+
+	infrastructure: Centralised
+
+	agents:
+		scheduler;
+		output;
+		input;
+
+	aslSourcePath:
+		"src/asl";
+}
